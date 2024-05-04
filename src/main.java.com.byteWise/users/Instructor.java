@@ -1,8 +1,17 @@
+/**************************************************************************************************************************************************
+*
+*Module: Instructor
+*
+*File Name: Instructor.java
+*
+*Author:  Hussam ELsayed Mohamed
+*
+****************************************************************************************************************************************************/
 package src.main.java.com.byteWise.users;
 import java.util.List;
 
 import src.main.java.com.byteWise.courses.Course;
-import src.main.java.com.byteWise.filesystem.Read_Write;
+
 
 import java.util.ArrayList;
 public class Instructor extends User {
@@ -20,15 +29,15 @@ public class Instructor extends User {
         System.out.println("Name: " + getName());
         System.out.println("Courses Teaching:");
         for (Course course : courses) {
-            System.out.println(course.getCourseTitle());
+            System.out.println(course.getTitle());
         }
     }
 
     public void addCourse(Course course) throws CourseNotFoundException {
         if (!courses.contains(course)) {
             courses.add(course);
-            Read_Write.writeToJson(this);
-            System.out.println("Added course to teach: " + course.getCourseTitle());
+       
+            System.out.println("Added course to teach: " + course.getTitle());
         } else if (courses.contains(course)){
             throw new CourseNotFoundException("Can't add course. Course already teaching.");
         } else {
@@ -39,8 +48,8 @@ public class Instructor extends User {
     public void removeCourse(Course course) {
         if (courses.contains(course)) {
             courses.remove(course);
-            Read_Write.writeToJson(this);
-            System.out.println("Removed course from teaching: " + course.getCourseTitle());
+    
+            System.out.println("Removed course from teaching: " + course.getTitle());
         } else {
             System.out.println("Can't remove course. Course not found.");
         }

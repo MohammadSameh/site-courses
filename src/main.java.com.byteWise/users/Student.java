@@ -1,4 +1,12 @@
-package src.main.java.com.byteWise.users;
+/**************************************************************************************************************************************************
+*
+*Module: Student
+*
+*File Name: Student.java
+*
+*Author:  Mohamed Sameh 
+*
+****************************************************************************************************************************************************/package src.main.java.com.byteWise.users;
 import java.util.List;
 
 import src.main.java.com.byteWise.courses.Course;

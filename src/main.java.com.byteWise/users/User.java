@@ -1,8 +1,8 @@
 /**************************************************************************************************************************************************
 *
-*Module: Studend
+*Module: User
 *
-*File Name: Student.java
+*File Name: User.java
 *
 *Author:  Mohamed Sameh 
 *
@@ -13,7 +13,7 @@ public abstract class User {
     private int id;
     private String name;
     public static int userCount = 0;
-    public int role; // 0 = Student, 1 = Instructor, 2 = Admin  
+    public int role; // 0 = Student, 1 = Instructor
     // Constructor
     public User(int id, String name) {
         this.id = id;
